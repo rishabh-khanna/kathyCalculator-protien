@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf')
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #F05E24;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(240 94 36 / 25%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.bg-orange {
+    background: #F05E24;
+}
+.bg-red {
+    background: #D22121;
+}
+.bg-grey{
+    background: #7d7d7d;
+}
+.text-orange {
+    color: #F05E24;
+}
+.text-grey{
+    color: #7d7d7d;
+}
+.text-red{
+    color:#D22121;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-disabled{
+    cursor: disabled;
+}
+.font-weight-400{
+    font-weight: 400;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.font-weight-700{
+    font-weight: 700;
+}
+.font-weight-800{
+    font-weight: 800;
+}
+.position-relative {
+    position: relative !important;
+}
+.position-absolute {
+    position: absolute !important;
+}
+.top-0{
+    top:0;
+}
+.bottom-0{
+    bottom:0;
+}
+.page-heading {
+    font-size: 36px;
+}
+.btn-width {
+    min-width: 155px;
+}
+.text-size-small{
+    font-size: 12px;
+}
+.text-size-x-large{
+    font-size: x-large;
+}
+.page-underling {
+    margin: 0 auto;
+    width: 20px;
+    border-top: 3px solid #D22121;
+}
+.form-check-input:checked {
+    background-color: #D22121;
+    border-color: #D22121;
+}
+.form-check-input:focus {
+    border-color: #d221215e;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #d221215e;
+}
+.col-15{
+    flex: 0 0 auto;
+    width: 15%;
+}
+@media (max-width: 480px) {
+    .col-15{
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+.col-25{
+    flex: 0 0 auto;
+    width: 20%;
+}
+@media (max-width: 480px) {
+    .col-25{
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+.trigonal {
+    width: 0;
+    height: 0;
+    top: -4px;
+    left: -4px;
+    border-top: 40px solid #D22121;
+    border-right: 40px solid transparent;
+  }
+.chart canvas{
+    height:300px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

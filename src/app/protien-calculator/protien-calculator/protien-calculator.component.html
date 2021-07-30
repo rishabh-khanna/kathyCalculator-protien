@@ -1,0 +1,115 @@
+<div class="container-fluid pb-5" >
+    <p class="page-heading text-center pt-2 font-weight-600">Calculate Your Protien</p>
+    <div class="page-underling"></div>
+    <form action="" class="row col-10 col-sm-8 mx-auto flex-column align-items-center" [formGroup]="basicDetailsForm" (ngSubmit)="calculateProtienIntake()">
+        <div class="col-12 col-sm-6 position-relative">
+            <div class="field form-group">
+                <input type="text" class="form-control" name="fullname" id="fullname" placeholder=" "
+                    formControlName="name"
+                    [ngClass]="{ 'is-invalid':basicDetailsSubmited && f.name.errors }">
+                <label for="fullname">Full Name</label>
+            </div>
+            <span class="text-danger text-size-small position-absolute bottom-0"
+                *ngIf=" basicDetailsSubmited && f.name.errors">Please enter your full name</span>
+        </div>
+       
+
+        <div class="col-12 col-sm-6 position-relative">
+            <div class="field form-group position-relative">
+                <input type="email" class="form-control" name="email" id="email" placeholder=" " formControlName="email"
+                    [ngClass]="{ 'is-invalid': basicDetailsSubmited && f.email.errors }">
+                <label for="email">Email address</label>
+            </div>
+            <span class="text-danger text-size-small position-absolute bottom-0"
+                *ngIf=" basicDetailsSubmited && f.email.errors">Please enter valid email</span>
+        </div>
+
+        <div class="col-12 col-sm-6 position-relative">
+            <div class="field form-group position-relative">
+                <input type="number" class="form-control" name="weight" id="weight" placeholder=" " formControlName="weight"
+                    [ngClass]="{ 'is-invalid': basicDetailsSubmited && f.weight.errors }">
+                <label for="email">Weight</label>
+            </div>
+            <span class="text-danger text-size-small position-absolute bottom-0"
+                *ngIf=" basicDetailsSubmited && f.weight.errors"> {{basicDetailsForm.get('bodyweightType').value ? 'Valid weight is 23-227 kg':'Valid weight is 50-500 lbs'}}</span>
+                <div class="d-flex w-100 justify-content-center pb-4">
+                    <div class="pr-2">lbs</div>
+                    <div class="form-check form-switch mx-2">
+                        <form [formGroup]="basicDetailsForm">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked
+                                formControlName="bodyweightType" (change)="changeWeight()">
+                        </form>
+                    </div>
+                    <span>kg</span>
+                </div>
+        </div>
+
+        <div class="col-12 col-sm-6 position-relative">
+            <div>
+            <label for="email">Select your Gender</label>
+        
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="M" formControlName="gender"> 
+                <label class="form-check-label" for="male">M</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="F" formControlName="gender">
+                <label class="form-check-label" for="female">F</label>
+              </div>
+              <span class="text-danger text-size-small position-absolute bottom-0"
+              *ngIf=" basicDetailsSubmited && f.gender.errors">Please select gender</span>
+            </div>
+        </div>
+        <br>
+        <div class="col-12 col-sm-6 position-relative">
+            <div>
+            <label for="email">Select your protien intake goal</label>
+                
+            <div class="form-check ">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Sedenatary" formControlName="goal">Sedenatary(generally physically inactive)
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Light Active" formControlName="goal">Light Active(includes walking or gardening) 
+                </label>
+              </div>
+              <div class="form-check ">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Moderate" formControlName="goal">Moderate(30minutes of moderate activity,thrice weekly)
+                </label>
+              </div>
+              <div class="form-check ">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Active" formControlName="goal">Active(one hour of exercise,five times weekly)
+                </label>
+              </div>
+              <div class="form-check ">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Very active" formControlName="goal">Very active(10-20 hours of exercise weekly)
+                </label>
+              </div>
+              <div class="form-check ">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="goal" id="goal" value="Athelete" formControlName="goal">Athelete(Over 20 hours of exercise weekly)
+                </label>
+              </div>
+              <br>
+              <span class="text-danger text-size-small position-absolute bottom-0"
+              *ngIf=" basicDetailsSubmited && f.goal.errors">Please select a goal</span>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex w-100 pt-2">
+            <button type="submit" class="btn btn-width bg-red text-white mx-auto" >Calculate Protien Intake
+
+            </button>
+        </div>
+        <div class="d-flex w-100 pt-2">
+          <span class="text-danger text-size-small position-absolute bottom-0"
+          *ngIf="protienResult">Protien intake should be {{protienIntake}} gms.</span>
+      </div>
+    </form>
+
+</div>

@@ -1,0 +1,141 @@
+<div class="d-flex flex-column" *ngIf="goalType">
+    <p class="page-heading text-center pt-2 font-weight-600">Goals</p>
+    <div class="page-underling"></div>
+    <div class="text-center font-weight-600 pt-2 pb-5">What is your Goal ?</div>
+    <div class="d-flex justify-content-center flex-wrap pb-3">
+        <div class="border shadow rounded col-6 mb-2 col-sm-2 p-2 poition-relative d-flex flex-column justify-content-center mx-1"
+            (click)="tilesClicked('one')">
+            <div class="w-100 position-relative py-1">
+                <div class="trigonal position-absolute" *ngIf="tilesOneSelected">
+                    <div class="position-relative text-white">
+                        <span class="position-absolute" style="top: -40px;left: 6px;">&#x2714;</span>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/images/weight-loss.png" alt="" height="48" width="48" class="mx-auto py-1">
+            <span class="font-weight-600 text-center py-1">Lose Weight</span>
+            <span class="font-weight-400 text-grey text-size-small text-center py-1">You'd like to lose at least 10 to
+                15 pounds (or more).</span>
+        </div>
+        <div class="border shadow rounded col-6 mb-2 col-sm-2 p-2 poition-relative d-flex flex-column justify-content-center mx-1">
+            <div class="w-100 position-relative py-1">
+                <div class="trigonal position-absolute" *ngIf="tilesTwoSelected">
+                    <div class="position-relative text-white">
+                        <span class="position-absolute" style="top: -40px;left: 6px;">&#x2714;</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="top: 541px;left: 586px;width: 48px;height: 48px;opacity: 1;"
+                class="mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench" viewBox="0 0 16 16" style="height: 3rem;width: auto;">
+                    <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11l.471.242z"/>
+                </svg>
+            </div>
+            <span class="font-weight-600 text-center py-1">Maintenance</span>
+            <!-- <span class="font-weight-400 text-grey text-size-small text-center py-1">Option under maintenance</span> -->
+        </div>
+        <!-- <div class="border shadow rounded col-6 mb-2 col-sm-2 p-2 poition-relative d-flex flex-column justify-content-center">
+            <div class="w-100 position-relative py-1">
+                <div class="trigonal position-absolute" *ngIf="tilesThreeSelected">
+                    <div class="position-relative text-white">
+                        <span class="position-absolute" style="top: -40px;left: 6px;">&#x2714;</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="top: 541px;left: 586px;width: 48px;height: 48px;background: #E8E8E8 0% 0% no-repeat padding-box;opacity: 1;"
+                class="mx-auto"></div>
+            <span class="font-weight-600 text-center py-1">Coming Soon</span>
+            <span class="font-weight-400 text-grey text-size-small text-center py-1">Option under maintenance</span>
+        </div>
+        <div class="border shadow rounded col-6 mb-2 col-sm-2 p-2 poition-relative d-flex flex-column justify-content-center">
+            <div class="w-100 position-relative py-1">
+                <div class="trigonal position-absolute" *ngIf="tilesFourSelected">
+                    <div class="position-relative text-white">
+                        <span class="position-absolute" style="top: -40px;left: 6px;">&#x2714;</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="top: 541px;left: 586px;width: 48px;height: 48px;background: #E8E8E8 0% 0% no-repeat padding-box;opacity: 1;"
+                class="mx-auto"></div>
+            <span class="font-weight-600 text-center py-1">Coming Soon</span>
+            <span class="font-weight-400 text-grey text-size-small text-center py-1">Option under maintenance</span>
+        </div>
+        <div class="border shadow rounded col-6 mb-2 col-sm-2 p-2 poition-relative d-flex flex-column justify-content-center">
+            <div class="w-100 position-relative py-1">
+                <div class="trigonal position-absolute" *ngIf="tilesFiveSelected">
+                    <div class="position-relative text-white">
+                        <span class="position-absolute" style="top: -40px;left: 6px;">&#x2714;</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="top: 541px;left: 586px;width: 48px;height: 48px;background: #E8E8E8 0% 0% no-repeat padding-box;opacity: 1;"
+                class="mx-auto"></div>
+            <span class="font-weight-600 text-center py-1">Coming Soon</span>
+            <span class="font-weight-400 text-grey text-size-small text-center py-1">Option under maintenance</span>
+        </div> -->
+    </div>
+    <div class="d-flex w-100 pt-2 justify-content-center">
+        <button class="btn btn-width bg-grey text-white mx-1" (click)="navigateToPersonlaDetails()">Back</button>
+        <button class="btn btn-width bg-red text-white mx-1" (click)="goalTypeSelectedClicked()">Next</button>
+    </div>
+</div>
+<div class="d-flex flex-column" *ngIf="goalTypeSelected">
+    <p class="page-heading text-center pt-2 font-weight-600">Goals</p>
+    <div class="page-underling"></div>
+    <div class="text-center font-weight-600 pt-2 pb-5">How much do you want to weight?</div>
+    <div class="d-flex flex-column">
+        <form action="" class="row col-12 col-sm-8 mx-auto justify-content-center pb-3" [formGroup]="goalsForm">
+            <div class="col-6 form-group position-relative">
+                <input type="number" class="form-control" name="weight" id="weight"
+                    placeholder="Enter your desired weight" formControlName="weight"
+                    [ngClass]="{ 'is-invalid': goalsFormSubmited && f.weight.errors }">
+                <span class="text-danger text-size-small font-weight-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    {{goalsForm.get('weightType').value ? 'Valid weight is 23-227 kg':'Valid weight is 50-500 lbs'}}
+                </span>
+            </div>
+        </form>
+        <div class="d-flex w-100 justify-content-center pb-4">
+            <div class="pr-2">lbs</div>
+            <div class="form-check form-switch mx-2">
+                <form action="" [formGroup]="goalsForm">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked
+                        formControlName="weightType">
+                </form>
+            </div>
+            <span>kg</span>
+        </div>
+    </div>
+    <div class="text-center font-weight-600 pt-2 pb-3">By When?</div>
+    <div class="d-flex flex-column">
+        <form action="" class="row col-12 col-sm-8 mx-auto justify-content-center pb-3">
+            <div class="field col-6 form-group position-relative">
+                <form action="" [formGroup]="goalsForm">
+                    <!-- <input type="date" class="form-control" name="date" id="date" placeholder="Choose a date"
+                        formControlName="date" [ngClass]="{ 'is-invalid': goalsFormSubmited && f.date.errors }"> -->
+
+                    <input type="text" readonly class="form-control" name="date" id="date" placeholder="Choose a date"
+                        class="form-control" bsDatepicker [minDate]="minDate"
+                        [bsConfig]="{ isAnimated: true, dateInputFormat: 'MM-DD-YYYY', containerClass:'theme-red' }"
+                        formControlName="date" [ngClass]="{ 'is-invalid': goalsFormSubmited && f.date.errors }">
+                </form>
+            </div>
+        </form>
+    </div>
+    <div class="d-flex w-100 pt-2 justify-content-center">
+        <form action="" [formGroup]="goalsForm" (ngSubmit)="navigateToDiet()">
+            <button class="btn btn-width bg-grey text-white mx-1" (click)="goalTypeSelectedClicked()">Back</button>
+            <button type="submit" class="btn btn-width bg-red text-white mx-1"
+            [disabled]="goalsForm.get('weightType').value ? 
+            !(goalsForm.get('weight').value >= 23 && goalsForm.get('weight').value <= 227) :
+            !(goalsForm.get('weight').value >= 50 && goalsForm.get('weight').value <= 500)"
+            >Next</button>
+        </form>
+    </div>
+</div>

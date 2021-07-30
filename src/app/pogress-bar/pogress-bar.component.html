@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="d-flex position-relative">
+        <!-- <div class="d-flex justify-content-between mx-auto status-line-width position-absolute line-position">
+            <div class="border-style line-width" ></div>
+            <div class="border-style line-width" ></div>
+            <div class="border-style line-width" ></div>
+            <div class="border-style line-width" ></div>
+        </div> -->
+        <div class="d-flex justify-content-between mx-auto status-line-width position-absolute line-position">
+            <div class="line-width"
+                [ngClass]="{'border-style': pogressStatus.personalDetails !== 'completed','border-style-active': pogressStatus.personalDetails == 'completed'}">
+            </div>
+            <div class="line-width"
+                [ngClass]="{'border-style': pogressStatus.goals !== 'completed','border-style-active': pogressStatus.goals == 'completed'}">
+            </div>
+            <div class="line-width"
+                [ngClass]="{'border-style': pogressStatus.diet !== 'completed','border-style-active': pogressStatus.diet == 'completed'}">
+            </div>
+            <div class="line-width"
+                [ngClass]="{'border-style': pogressStatus.activity !== 'completed','border-style-active': pogressStatus.activity == 'completed'}">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="d-flex flex-column status-width text-center">
+            <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.personalDetails == 'active' || pogressStatus.personalDetails == 'completed', 'bg-white text-orange': pogressStatus.personalDetails == 'notVisited'}"
+                (click)="navigateToPersonalDetails()">
+                <span *ngIf="pogressStatus.personalDetails !== 'completed'">1</span>
+                <span *ngIf="pogressStatus.personalDetails == 'completed'">&#x2714;</span>
+            </div>
+            <div class="py-2">
+                Personal Details
+            </div>
+        </div>
+        <div class="d-flex flex-column status-width text-center">
+            <!-- <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+            [ngClass]="{ 'bg-orange text-white': pogressStatus.goals == 'active' || pogressStatus.goals == 'completed', 'bg-white text-orange': pogressStatus.goals == 'notVisited'}"
+             (click)="navigateToGoals()"> -->
+            <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.goals == 'active' || pogressStatus.goals == 'completed', 'bg-white text-orange': pogressStatus.goals == 'notVisited'}">
+                <span *ngIf="pogressStatus.goals !== 'completed'">2</span>
+                <span *ngIf="pogressStatus.goals == 'completed'">&#x2714;</span>
+            </div>
+            <div class="py-2">
+                Goals
+            </div>
+        </div>
+        <div class="d-flex flex-column status-width text-center">
+            <!-- <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+            [ngClass]="{ 'bg-orange text-white': pogressStatus.diet == 'active' || pogressStatus.diet == 'completed', 'bg-white text-orange': pogressStatus.diet == 'notVisited'}"
+            (click)="navigateToDiet()"> -->
+            <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.diet == 'active' || pogressStatus.diet == 'completed', 'bg-white text-orange': pogressStatus.diet == 'notVisited'}">
+                <span *ngIf="pogressStatus.diet !== 'completed'">3</span>
+                <span *ngIf="pogressStatus.diet == 'completed'">&#x2714;</span>
+            </div>
+            <div class="py-2">
+                Diet
+            </div>
+        </div>
+        <div class="d-flex flex-column status-width text-center">
+            <!-- <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.activity == 'active' || pogressStatus.activity == 'completed', 'bg-white text-orange': pogressStatus.activity == 'notVisited'}"
+                (click)="navigateToActivity()"> -->
+            <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.activity == 'active' || pogressStatus.activity == 'completed', 'bg-white text-orange': pogressStatus.activity == 'notVisited'}">
+                <span *ngIf="pogressStatus.activity !== 'completed'">4</span>
+                <span *ngIf="pogressStatus.activity == 'completed'">&#x2714;</span>
+            </div>
+            <div class="py-2">
+                Activity
+            </div>
+        </div>
+        <div class="d-flex flex-column status-width text-center">
+            <!-- <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.results == 'active' || pogressStatus.results == 'completed', 'bg-white text-orange': pogressStatus.results == 'notVisited'}"
+                (click)="navigateToResults()"> -->
+            <div class="p-3 rounded-circle cursor-pointer d-flex justify-content-center align-items-center cicular-pogress mx-auto"
+                [ngClass]="{ 'bg-orange text-white': pogressStatus.results == 'active' || pogressStatus.results == 'completed', 'bg-white text-orange': pogressStatus.results == 'notVisited'}">
+                <span *ngIf="pogressStatus.results !== 'completed'">5</span>
+                <span *ngIf="pogressStatus.results == 'completed'">&#x2714;</span>
+            </div>
+            <div class="py-2">
+                Results
+            </div>
+        </div>
+    </div>
+
+</div>

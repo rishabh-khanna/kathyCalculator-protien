@@ -1,0 +1,44 @@
+
+   
+  .field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+  }
+  
+  label, input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  
+  label {
+    padding: 0px 15px;
+    margin: 0 4px;
+    letter-spacing: 0.05em;
+    background: #fff;
+  }
+  
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.9rem) scale(0.9);
+  }
+  
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+ 
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+ 
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+  }

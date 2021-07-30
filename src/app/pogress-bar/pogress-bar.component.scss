@@ -1,0 +1,31 @@
+.cicular-pogress {
+    width: 35px;
+    height: 35px;
+    border: 5px solid #F05E24;
+    z-index: 99;
+}
+.status-width{
+    width:128px;
+}
+.status-line-width {
+    width: 78%;
+}
+@media (max-width: 480px) {
+    .line-position {
+        right: 55px !important;
+    }
+}
+.line-width{
+    width: 23%;
+}
+.border-style{
+    border-top: 4px solid #e1e1e1;
+}
+.border-style-active{
+    border-top: 4px solid #F05E24;
+}
+.line-position{
+    top: 19px;
+    right: 123px;
+    z-index: 0;
+}
